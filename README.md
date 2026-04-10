@@ -2,12 +2,6 @@
 
 Un observatorio astronómico inmersivo para Meta Quest 3, desarrollado por la **Sociedad Astronómica Mazatleca (SAMAZ)** en colaboración con la **Universidad de Guanajuato**.
 
-Este proyecto nació de una idea simple: ¿y si pudieras pararte bajo un cielo perfectamente oscuro, sin contaminación lumínica, y ver cada estrella visible al ojo humano... desde cualquier lugar? Eso es lo que estamos construyendo. Un planetario personal en realidad virtual que no solo muestra estrellas, sino que las conecta con miles de años de mitología — griega, árabe, china y mesoamericana.
-
-Los datos astronómicos son reales. Cada estrella viene del catálogo HYG (Hipparcos, Yale Bright Star, Gliese), con posiciones precisas en época J2000, magnitudes aparentes, tipos espectrales y distancias. No son puntos decorativos: son las mismas estrellas que ves (o dejarías de ver) desde tu azotea.
-
----
-
 ## Estado actual
 
 **Fase 0 completada** — la base de trabajo está lista.
