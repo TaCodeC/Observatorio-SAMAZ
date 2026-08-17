@@ -1,0 +1,16 @@
+{
+  "name": "Samaz.Observatory.Astronomy",
+  "rootNamespace": "Samaz.Observatory.Astronomy",
+  "references": [
+    "Samaz.AstronomyEngine"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

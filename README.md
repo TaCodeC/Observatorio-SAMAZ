@@ -16,6 +16,40 @@ Lo que viene: **Fase 1 — Bóveda Celeste Funcional**. GPU Instancing de estrel
 
 ---
 
+## Prototipo temprano de bóveda estelar
+
+La escena `Assets/Scenes/SampleScene.unity` ya incluye un objeto **Celestial Vault Prototype** con `StellarVaultRenderer`.
+
+Al entrar a Play Mode:
+
+- Carga `Assets/StreamingAssets/Data/hyg_stars.bytes` con `UnityWebRequest`, compatible con Android/Quest.
+- Convierte RA/Dec del catálogo HYG a posiciones sobre una esfera de radio 90.
+- Filtra el Sol del catálogo para evitar que domine el render inicial.
+- Dibuja las estrellas como quads instanciados en lotes de 1023 usando el shader `Observatorio/StarBillboardURP`.
+- Aplica color aproximado desde B-V y tamaño/brillo desde magnitud aparente.
+
+Este renderer es deliberadamente de prototipo: permite validar visualmente densidad, color, escala y rendimiento inicial antes de migrar la parte astronómica fina a Astronomy Engine.
+
+Controles en Play Mode:
+
+- Mantener clic derecho + mover mouse: mirar alrededor.
+- Flechas o `I`/`J`/`K`/`L`: girar la vista sin mouse.
+- `W`/`A`/`S`/`D`: desplazarse; `Q`/`E`: bajar/subir.
+- `Shift`: movimiento rápido; `Ctrl`: movimiento fino.
+- Rueda del mouse o `Z`/`X`: cambiar campo de visión.
+- `+`/`-`: subir/bajar brillo global.
+- `[`/`]`: reducir/aumentar tamaño aparente de estrellas.
+- `Page Up`/`Page Down`: relajar o endurecer el filtro de magnitud.
+- `R`: regresar la cámara a la pose inicial; `Home`: restaurar visibilidad de estrellas.
+
+El Game View debe estar enfocado para recibir teclado. En una bóveda celeste el desplazamiento puede sentirse sutil porque las estrellas se renderizan sobre una esfera grande; para explorar el cielo, las flechas o `I/J/K/L` son la forma más directa.
+
+En Scene View la bóveda también tiene preview. Si no aparece inmediatamente después de recompilar scripts, seleccionar **Celestial Vault Prototype** o mover la cámara del Scene View fuerza el repintado.
+
+Nota: el binario actual contiene estrellas hasta magnitud 7.0. `Page Up` solo revelará más si el filtro se bajó antes o si se regenera `hyg_stars.bytes` con un límite mayor.
+
+---
+
 ## Cómo empezar
 
 ### Prerrequisitos

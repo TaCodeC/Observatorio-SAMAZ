@@ -1,0 +1,17 @@
+{
+  "name": "com.samaz.astronomy-engine",
+  "version": "2.1.19",
+  "displayName": "Astronomy Engine for SAMAZ",
+  "description": "Pinned C# source distribution of Astronomy Engine for local-sky coordinate transforms.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "author": {
+    "name": "Don Cross / SAMAZ",
+    "url": "https://github.com/cosinekitty/astronomy"
+  },
+  "keywords": [
+    "astronomy",
+    "ephemeris",
+    "coordinates"
+  ]
+}
